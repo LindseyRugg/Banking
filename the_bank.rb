@@ -103,10 +103,10 @@ def create_account
 	puts "3. Return to Account Menu"
 	choice = gets.chomp.to_i
 	case choice
-	when 1
+	when 1 then
 		type = "savings"
 		make_acct(type)
-	when 2
+	when 2 then
 		type = "checking"
 		make_acct(type)
 	when 3 then account_menu
@@ -140,7 +140,7 @@ def review_acct
 	end
 	choice = gets.chomp
 	@accounts.each do |acct|
-		if @current_customer == acct.customer & choice == acct.acct_number
+		if @current_customer == acct.customer && choice == acct.acct_number
 			@current_account = acct
 		end
 	end
